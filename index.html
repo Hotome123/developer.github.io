@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1 class="corazon">❤️</h1>
+        <p class="mensaje">Feliz Día de San Valentín, mi amor. Eres lo mejor que me ha pasado. ❤️</p>
+        <div class="flores">
+            <div class="flor"></div>
+            <div class="flor"></div>
+            <div class="flor"></div>
+        </div>
+        <a href="flowers.html"><button class="boton">Ver Mensaje Especial</button></a>
+    </div>
+    <div class="particulas"></div>
+    <script>
+        function crearParticula() {
+            const particula = document.createElement('div');
+            particula.classList.add('particula');
+            particula.style.left = Math.random() * window.innerWidth + 'px';
+            particula.style.top = Math.random() * window.innerHeight + 'px';
+            particula.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            document.querySelector('.particulas').appendChild(particula);
+            setTimeout(() => particula.remove(), 3000);
+        }
+        setInterval(crearParticula, 500);
+    </script>
+</body>
+</html>
+
